@@ -19,7 +19,7 @@ export default function CreateProduct() {
     photo: "ascascasc.jpg",
     description: "",
     price: "",
-    category: categories[0].id,
+    category: categories.length? categories[0]?.id : null,
   })
 
   //option category
@@ -122,7 +122,7 @@ export default function CreateProduct() {
           <select 
             className='outline-none py-2 px-2  text-oscuro rounded-md'
             onChange={changeOptionCategory}
-            defaultValue={categories.length? categories[0].id : ""}
+            defaultValue={categories.length? categories[0].id : null}
             name="category" 
             id="category">
 
