@@ -10,7 +10,7 @@ export default function DeleteCategory() {
   let [categoriesState, setCategoriesState] = useState(categories)
 
   let userApp01 = useSelector(state=>state.userApp01)
-  let [categoryId, setCategoryId] = useState(categories && categories.length? categories[0].id : 1)
+  let [categoryId, setCategoryId] = useState(categories && categories.length? categories[0]?.id : null)
 
   let [form, setForm] = useState({
     id: "",
@@ -87,11 +87,13 @@ export default function DeleteCategory() {
   }, [])
 
   useEffect(()=>{
-    let catgSelect = categoriesState.filter(ele=>ele.id === Number(categoryId))
-    setForm({
-      id: catgSelect[0].id,
-      name: catgSelect[0].name
-    })
+    if(categoriesState && categoriesState.length){
+      let catgSelect = categoriesState.filter(ele=>ele.id === Number(categoryId))
+      setForm({
+        id: catgSelect[0].id,
+        name: catgSelect[0].name
+      })
+    }
   }, [categoryId])
 
 
@@ -99,13 +101,8 @@ export default function DeleteCategory() {
     if(categories && categories.length){
       let antForm = [...categories]
       setCategoriesState(antForm)
-      setCategoryId(antForm[0].id? antForm[0].id : 1)
+      setCategoryId(antForm[0].id? antForm[0].id : null)
     }
-
-
-    
-    
-
   }, [categories])
 
 
