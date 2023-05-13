@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteCateforyApi, getAllCategories, getCategorieId } from '../../redux/actionsCategories'
 import { deleteProductApi, getAllProducts } from '../../redux/actionProducts'
 import { CONSTANTS_APP } from '../../redux/constants'
 import { typeOptions } from '../../requestUser/Entities'
@@ -10,7 +9,7 @@ import { typeOptions } from '../../requestUser/Entities'
 export default function DeleteProduct() {
   let userApp01 = useSelector(state=>state.userApp01)
   let [productState, setProductState] = useState([])
-  let [productId, setProductId] = useState(productState && productState.length? productState[0].id : 1)
+  let [productId, setProductId] = useState(productState && productState.length? productState[0].id : null)
   let dispatch = useDispatch()
 
   let [form, setForm] = useState({
@@ -97,7 +96,7 @@ export default function DeleteProduct() {
             onChange={changeOption}
             name="product" 
             id="product"
-            value={productId? productId : 1}>
+            value={productState.length && productId? productId : null}>
 
             {productState && productState.length? (productState.map((pro, ind)=>
               <option key={ind} value={pro.id}>
