@@ -5,6 +5,7 @@ import { createProductApi } from '../../redux/actionProducts'
 import "./styles.css"
 import { CONSTANTS_APP } from '../../redux/constants'
 import { typeOptions } from '../../requestUser/Entities'
+import { getAllCategories } from '../../redux/actionsCategories'
 
 export default function CreateProduct() {
   let categories = useSelector(state=>state.allCategoriesApp01)
@@ -46,6 +47,21 @@ export default function CreateProduct() {
         price: "",
         category: null,
       })
+
+      getAllCategories()
+      .then(res=>{
+        dispatch({
+          type:CONSTANTS_APP.GET_ALL_CATEGORIES_APP01, 
+          payload: res.data
+        })
+      }).catch(err=>{
+        alert(err.response.status)
+        dispatch({
+          type:CONSTANTS_APP.GET_ALL_CATEGORIES_APP01, 
+          payload: [] 
+        })
+      })
+
     }else{
       dispatch({
         type: CONSTANTS_APP.ENITIES_APP_01,
@@ -106,7 +122,7 @@ export default function CreateProduct() {
           <select 
             className='outline-none py-2 px-2  text-oscuro rounded-md'
             onChange={changeOptionCategory}
-            defaultValue={categories[0]?.id}
+            defaultValue={categories.length? categories[0].id : ""}
             name="category" 
             id="category">
 
