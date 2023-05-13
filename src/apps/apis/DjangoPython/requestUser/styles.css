@@ -1,0 +1,20 @@
+
+
+
+/* Scroll */
+.scroll-res::-webkit-scrollbar{
+    background-color: rgba(179, 189, 189, 0.836);
+    border-radius: 4px;
+
+    height: 13px;
+    width: 5px;
+  }
+  .scroll-res::-webkit-scrollbar-thumb{
+    border-radius: 2px;
+
+    background-color: rgb(24, 23, 23);
+  }
+
+
+
+  

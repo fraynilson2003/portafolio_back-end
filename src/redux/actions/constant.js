@@ -1,0 +1,8 @@
+export const CONSTANTS = {
+  GET_ALL_VIDEOGAMES: "GET_ALL_VIDEOGAMES",
+  
+  SET_USER_AUTH0: "SET_USER_AUTH0",
+
+
+}
+
