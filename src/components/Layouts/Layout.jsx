@@ -3,9 +3,12 @@ import { Link } from "react-router-dom"
 import NavBar from "../NavBar/NavBar";
 import Bottom from "../NavBar/Bottom";
 import Hero from "./Hero";
+import { sectionsApp } from "./constants";
+
+
 const Layout = () => {
   const [openSideMenu, setOpenSideMenu] = useState(false);
-
+  const [section, setSection] = useState(sectionsApp.aboutMe)
 
   const toggleSideMainMenu = () => {
     setOpenSideMenu(!openSideMenu);
@@ -14,9 +17,12 @@ const Layout = () => {
 
   return (
     <div className="realtive flex flex-col justify-between w-full h-screen">
-      <NavBar/>
+      <NavBar
+        section={section}
+        setSection={setSection}/>
 
-      <Hero/>
+      <Hero
+        section={section}/>
 
       <Bottom/>
     </div>

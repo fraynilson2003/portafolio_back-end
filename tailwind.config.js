@@ -33,6 +33,7 @@ export default {
         trans: "rgb(4,4,4, 0)"
       }
     }
+ 
     //   // backgroundImage: {
     //   //   site: "url('./assets/site-bg.jpg')",
     //   //   about: "url('./assets/about.png')",
@@ -40,6 +41,7 @@ export default {
     //   // },
     // },
   },
+
   plugins: [],
 };
 
