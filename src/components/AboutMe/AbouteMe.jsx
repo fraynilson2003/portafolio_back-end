@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from "framer-motion"
 import { fadeIn } from '../../helpers/variantsMotion'
+import ReactDOMServer from 'react-dom/server';
 
 import AngImg from "../../assets/avatarAng/splash-ang.png"
 import KataraImg from "../../assets/avatarAng/splash-katara.png"
 import TophImg from "../../assets/avatarAng/splash-toph.png"
 import ZukoImg from "../../assets/avatarAng/splash-zuko.png"
 import NavAboutMe, { optionLinks } from './NavAboutMe'
+import { Tooltip } from 'react-tooltip';
 
 export default function AbouteMe() {
   const [screenHeight, setScreenHeight] = useState(0);
@@ -29,6 +31,8 @@ export default function AbouteMe() {
     };
   }, []);
 
+
+
   return (
     <div id='per-scroll' className='flex flex-1 flex-col div-gradient relative items-center h-[calc(100vh-44px)] max-h-[calc(100vh-44px)] overflow-y-auto  mx-auto text-font_primary'>
       {/* backdrop-blur-[1px] */}
@@ -46,10 +50,18 @@ export default function AbouteMe() {
             viewport={{once: false, amount:0.3}}
             className='flex flex-col h-full items-center justify-center '>
 
-            <h1 className='flex justify-center mt-2 mb-16 px-4 text-3xl md:text-4xl font-cuarto text-center '>
+
+            <h1 
+              data-tooltip-id="my-tooltip"
+              data-tooltip-html={ReactDOMServer.renderToStaticMarkup(<div>I am <b>JSX</b> content</div>)}
+              className='flex justify-center mt-2 mb-10 px-4 text-3xl md:text-4xl font-cuarto text-center '>
               Backend Developer & Fronted Developer <br />
               Open Source
             </h1>
+
+
+            <Tooltip id="my-tooltip" />
+
 
 
             <p className='w-full text-green my-1 font-secondary font-semibold text-xl px-4 text-center md:text-start '>
@@ -65,7 +77,7 @@ export default function AbouteMe() {
               {"Tecnologies backend:  "}
             </p>
 
-            <p className='w-full  mb-2 font-secondary font-semibold text-xl px-4 text-center md:text-start '>
+            <p className='w-full  mb-3 font-secondary font-semibold text-xl px-4 text-center md:text-start '>
             <TypeAnimation 
                 sequence={[
                   "Typescript & Javascript & Python",
@@ -84,7 +96,9 @@ export default function AbouteMe() {
 
 
 
-              <p className="mt-4 px-4 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam molestiae magni enim vitae animi, illo amet facere neque ullam eos fugiat officia ex optio distinctio voluptatem consequuntur aliquid suscipit excepturi.</p>    
+              <p className="mt-1 px-4 text-justify text-sm lg:text-base">
+                Meet the Cyberpunk Coder: part hacker, part wizard. With a keyboard as a magic wand and lines of code as spells, he dances in binary rhythm and weaves dreams in the language of machines. His code is sharp and his creativity even sharper. In a world where bits and bytes rule, this rebellious programmer never leaves the hand-brewed coffee behind. Embracing the cyberpunk spirit, he sits every day on his own throne from where he watches the world to conquer.           
+              </p>    
 
           </motion.div>
         </div >
@@ -99,7 +113,7 @@ export default function AbouteMe() {
             >
 
             <div className="w-full flex justify-center h-[90%] overflow-hidden relative ">
-              <img className="object-contain h-full rounded-lg brightness-[0.2] md:brightness-100" src={AngImg} alt="Ang" />
+              <img className="object-contain h-full rounded-lg brightness-[0.2] md:brightness-100 filter hover:drop-shadow-2xl text-green" src={AngImg} alt="Ang" />
 
             </div>
 
