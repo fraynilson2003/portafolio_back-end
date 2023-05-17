@@ -20,7 +20,7 @@ export default function NavBar({ section, setSection }) {
         <ul 
           onClick={()=>setSection(sectionsApp.aboutMe)}
           className={`block px-2 cursor-pointer h-full ${section === sectionsApp.aboutMe? "bg-font_trans/40" : ""}`}>
-          About
+          About me
         </ul>
 
         <ul 

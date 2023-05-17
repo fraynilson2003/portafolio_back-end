@@ -73,7 +73,7 @@ export default function DjangoApp() {
 
   return (
 
-    <div className='flex flex-1 flex-col mx-auto   text-font_primary'>
+    <div className='flex flex-1 flex-col mx-auto h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] max-h-[calc(100vh-44px)] overflow-y-auto   text-font_primary'>
       <div className='flex relative mr-0 md:mt-4 justify-start mt-2 ml-2 md:hidden'>
         <AvatarSm/>
       </div>

@@ -6,3 +6,26 @@ body{
   margin: 0;
   padding: 0;
 }
+
+
+.active-scroll{
+  background-color: #ffffff;
+  border-radius: 40px;
+  color: rgb(0, 0, 0);
+} 
+
+.tuki{
+  background-color: #1c6e0f;
+}
+
+.div-gradient{
+  background: linear-gradient(
+    86.23deg,
+    #3c414070 21.43%,
+    #121d1c50 50.63%,
+    #0c1f1c34 100%,
+    #04221748 117.04%
+  );
+
+}
+

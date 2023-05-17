@@ -6,6 +6,7 @@ export default {
       primary: 'sans-serif',
       secondary: 'Montserrat',
       tertiary: 'Noto Serif',
+      cuarto: "Roboto Mono"
     },
     screens: {
       aa: "320px",
@@ -20,6 +21,7 @@ export default {
         font_primary: "#DDDDDD",
         font_second: "#2963E2",
         font_trans: "#6B7280",
+        font_green: "#1c6e0f",
         primary: '#1E1E1E',
         top_barra: '#3C3C3C',
         bottom_barra: "#007ACC",
@@ -31,6 +33,7 @@ export default {
         red: "rgb(226, 30, 56)",
         fondo_json: "#2B2B2B",
         trans: "rgb(4,4,4, 0)"
+
       }
     }
  
