@@ -1,0 +1,51 @@
+/* Scroll */
+.container-div::-webkit-scrollbar{
+    background-color: #333333;
+    height: 100%;
+    width: 11px;
+  }
+
+.container-div::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: rgb(179, 176, 176);
+}
+
+/*button*/
+.button-1{
+    background: linear-gradient(
+        86.23deg,
+        #224e45a8 21.43%,
+        #0c3d399d 50.63%,
+        #0c5f5379 100%,
+        #0eaf7488 117.04%
+    );
+    
+}
+
+
+.button-2{
+    background: linear-gradient(
+        86.23deg,
+        #284a77b9 21.43%,
+        #19375ac9 50.63%,
+        #1d3b7cd8 100%,
+        #161e8f88 117.04%
+    );
+    
+}
+
+
+.button-3{
+    background: linear-gradient(
+        86.23deg,
+        #cccacaa8 21.43%,
+        #9a9c9c9d 50.63%,
+        #79787879 100%,
+        #46474788 117.04%
+    );
+    
+}
+
+.sombra{
+    text-shadow:2px 10px 10px white ;
+}

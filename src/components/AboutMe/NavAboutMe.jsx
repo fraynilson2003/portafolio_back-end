@@ -50,7 +50,7 @@ export default function NavAboutMe() {
           activeClass='active-scroll'
           smooth={true}
           spy={true}>
-            <BsClipboardData/>
+            <BsBriefcase/>
           </Link>
 
           <Link 
@@ -61,7 +61,7 @@ export default function NavAboutMe() {
           activeClass='active-scroll'
           smooth={true}
           spy={true}>
-            <BsBriefcase/>
+            <BsChatSquareText/>
           </Link>
 
 

@@ -2,7 +2,7 @@ import React from 'react'
 import Aside from './Aside'
 import DjangoApp from '../../apps/apis/DjangoPython/DjangoApp'
 import { sectionsApp } from './constants'
-import AbouteMe from '../AboutMe/AbouteMe'
+import About from '../AboutMe/About'
 
 export default function Hero({ section }) {
 
@@ -13,7 +13,7 @@ export default function Hero({ section }) {
 
       {section == sectionsApp.aboutMe? (
       <div className='flex-1'>
-        <AbouteMe/>
+        <About/>
       </div>
       ):<></>}
 

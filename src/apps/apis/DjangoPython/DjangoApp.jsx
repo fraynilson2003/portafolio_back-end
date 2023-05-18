@@ -80,7 +80,7 @@ export default function DjangoApp() {
 
       <div className='flex flex-col md:flex-row w-full relative justify-center md:justify-between'>
         <div>
-          <h1 className='text-4xl text-center  font-secondary mx-auto mt-2 md:mt-8 text-accent   md:ml-20 md:text-left'>App made with Python-Django</h1>
+          <h1 className='text-4xl text-center  font-secondary mx-auto mt-2 md:mt-8 text-accent   md:ml-20 md:text-left'>Api made with Python-Django</h1>
           <span className='flex flex-row justify-center  text-center font-tertiary text-lg   md:ml-20 md:justify-start'>
             <p className="inline-block">Technologies used</p>
             <TypeAnimation 

@@ -6,7 +6,8 @@ export default {
       primary: 'sans-serif',
       secondary: 'Montserrat',
       tertiary: 'Noto Serif',
-      cuarto: "Roboto Mono"
+      cuarto: "Roboto Mono",
+      quinto: "Orbitron"
     },
     screens: {
       aa: "320px",
