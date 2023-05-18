@@ -4,6 +4,9 @@ import { fadeIn } from '../../helpers/variantsMotion'
 import { TypeAnimation } from 'react-type-animation'
 
 import TophImg from "../../assets/avatarAng/splash-toph.png"
+import apiDjango from "../../assets/projects/api django.png"
+import appVideogames from "../../assets/projects/app videogames.png"
+
 import { optionLinks } from './NavAboutMe'
 
 export default function Projects() {
@@ -20,26 +23,85 @@ export default function Projects() {
           viewport={{once: false, amount:0.3}}
           className='flex flex-col h-full items-center justify-center '>
 
-          <h1 className='flex justify-center mt-2 mb-16 px-4  text-3xl font-secondary text-center'>welcome to my portfolio</h1>
+          <h1 className='flex justify-center font-cuarto mt-2 mb-6 px-4 md:pr-10 md:pl-2 text-3xl font-semibold text-center'>
+            Projects
+          </h1>
+
+          <p className="w-full mt-2 px-4 md:pr-10 md:pl-2 text-start text-lg">
+            These are some of the projects that I have carried out: 
+          </p>    
 
 
-          <TypeAnimation 
-            sequence={[
-              "Python",
-              2000,
-              "Django",
-              2000,
-              "PostgresSQL",
-              2000,
-              "Django-rest",
-              2000
-            ]}
-            speed={50}
-            className="text-accent inline-block ml-2"
-            wrapper='div'
-            repeat={Infinity}/>
+          <div className='flex flex-wrap h-auto w-full mt-10 md:mt-3'>
+            {/* image 1*/}
+            <div className="group w-[42%] mx-auto my-2 min-w-[200px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
+              {/* overlay */}
+        
+              <img src={apiDjango} alt="apiDjango" className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-400" />
+              {/* pretittle  */}
+              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-300 z-50">
+                <span className="text-gradient">
+                  UI/UX Design
+                </span>
+              </div>
 
-            <p className="mt-4 px-4 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam molestiae magni enim vitae animi, illo amet facere neque ullam eos fugiat officia ex optio distinctio voluptatem consequuntur aliquid suscipit excepturi.</p>    
+              {/* tittle */}
+              <div className="absolute -bottom-full left-12 group-hover:bottom-8 transition-all duration-500 z-50">
+               <span span className="text-xl text-white sombra">
+                  Project Tittle
+                </span>
+              </div>
+
+            </div>
+
+            {/* image 2*/}
+            <div className="group w-[42%] mx-auto my-2 min-w-[200px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
+              {/* overlay */}
+        
+              <img src={appVideogames} alt="appVideogames" className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-400" />
+              {/* pretittle  */}
+              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-300 z-50">
+                <span className="text-gradient">
+                  UI/UX Design
+                </span>
+              </div>
+
+              {/* tittle */}
+              <div className="absolute -bottom-full left-12 group-hover:bottom-8 transition-all duration-500 z-50">
+               <span span className="text-xl text-white sombra">
+                  Project Tittle
+                </span>
+              </div>
+
+            </div>    
+
+            {/* image 3*/}
+            <div className="group w-[42%] mx-auto my-2 min-w-[200px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
+              {/* overlay */}
+        
+              <img src={apiDjango} alt="img1" className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-400" />
+              {/* pretittle  */}
+              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-300 z-50">
+                <span className="text-gradient">
+                  UI/UX Design
+                </span>
+              </div>
+
+              {/* tittle */}
+              <div className="absolute -bottom-full left-12 group-hover:bottom-8 transition-all duration-500 z-50">
+               <span span className="text-xl text-white sombra">
+                  Project Tittle
+                </span>
+              </div>
+
+            </div> 
+
+            {/* image 4*/}
+          
+          </div>
+     
+
+
 
         </motion.div>
       </div >
