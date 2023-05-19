@@ -1,24 +1,26 @@
 /* Scroll */
 .container-div::-webkit-scrollbar{
-    display: none;
+    background-color: #333333;
+    height: 100%;
+    width: 11px;
 
   }
 
 .container-div::-webkit-scrollbar-thumb{
-    display: none;
+    border-radius: 5px;
+    background-color: rgb(179, 176, 176);
 }
 
 @media screen and (max-width: 768px) {
     /* Estilos para pantallas con un ancho máximo de 600px */
     .container-div::-webkit-scrollbar{
-        background-color: #333333;
-        height: 100%;
-        width: 11px;
+        display: none;
+
       }
     
     .container-div::-webkit-scrollbar-thumb{
-        border-radius: 5px;
-        background-color: rgb(179, 176, 176);
+        display: none;
+
     }
   }
 

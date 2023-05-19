@@ -1,5 +1,6 @@
 import React from 'react'
 import { sectionsApp } from '../Layouts/constants'
+import { Link } from 'react-router-dom'
 
 export default function NavBar({ section, setSection }) {
 
@@ -20,19 +21,21 @@ export default function NavBar({ section, setSection }) {
         <ul 
           onClick={()=>setSection(sectionsApp.aboutMe)}
           className={`block px-2 cursor-pointer h-full ${section === sectionsApp.aboutMe? "bg-font_trans/40" : ""}`}>
-          About me
+              About me
         </ul>
 
         <ul 
           onClick={()=>setSection(sectionsApp.myProject_1)}
           className={`block px-2 cursor-pointer h-full ${section === sectionsApp.myProject_1? "bg-font_trans/40" : ""}`}>
-          My project 1
+      
+            My project 1
+
         </ul>
 
         <ul 
           onClick={()=>setSection(sectionsApp.myProject_2)}
           className={`block px-2 cursor-pointer h-full ${section === sectionsApp.myProject_2? "bg-font_trans/40" : ""}`}>
-          My project 2
+            My project 2
         </ul>
 
         <ul 

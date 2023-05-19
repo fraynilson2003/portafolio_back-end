@@ -3,6 +3,7 @@ import Aside from './Aside'
 import DjangoApp from '../../apps/apis/DjangoPython/DjangoApp'
 import { sectionsApp } from './constants'
 import About from '../AboutMe/About'
+import { Route, Routes } from 'react-router-dom'
 
 export default function Hero({ section }) {
 
@@ -11,10 +12,10 @@ export default function Hero({ section }) {
     <div className='flex flex-grow flex-row w-full bg-primary'>
       <Aside/>
 
+
+
       {section == sectionsApp.aboutMe? (
-      <div className='flex-1'>
         <About/>
-      </div>
       ):<></>}
 
       {section == sectionsApp.myProject_2? (

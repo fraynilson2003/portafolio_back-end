@@ -21,7 +21,7 @@ export default function Projects() {
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}
-          className='flex flex-col h-full items-center justify-center '>
+          className='flex flex-col h-auto items-center justify-center '>
 
           <h1 className='flex justify-center font-cuarto mt-2 mb-6 px-4 md:pr-10 md:pl-2 text-3xl font-semibold text-center'>
             Projects
@@ -32,42 +32,43 @@ export default function Projects() {
           </p>    
 
 
-          <div className='flex flex-wrap h-auto w-full mt-10 md:mt-3'>
+          <div className='flex flex-wrap h-auto w-full mt-6s md:mt-3 gap-2'>
             {/* image 1*/}
-            <div className="group w-[42%] mx-auto my-2 min-w-[200px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
-              {/* overlay */}
-        
-              <img src={apiDjango} alt="apiDjango" className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-400" />
+            <div className="group w-[42%] mx-auto my-2 min-w-[220px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
+              {/* overlay */} 
+              <img src={appVideogames} alt="apiDjango" className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-400" />
               {/* pretittle  */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-300 z-50">
+              <div className="absolute -bottom-full left-4 group-hover:bottom-14 transition-all duration-300 z-50">
                 <span className="text-gradient">
-                  UI/UX Design
+                    UI/UX Design
                 </span>
               </div>
 
               {/* tittle */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-8 transition-all duration-500 z-50">
+              <div className="absolute -bottom-full left-4 group-hover:bottom-8 transition-all duration-500 z-50">
                <span span className="text-xl text-white sombra">
-                  Project Tittle
+                <a href='https://videogames-portafolio.vercel.app/' target="_blank" rel="noopener noreferrer">
+                    Tundra Games
+                  </a>
                 </span>
               </div>
 
             </div>
 
             {/* image 2*/}
-            <div className="group w-[42%] mx-auto my-2 min-w-[200px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
+            <div className="group w-[42%] mx-auto my-2 min-w-[220px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
               {/* overlay */}
         
-              <img src={appVideogames} alt="appVideogames" className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-400" />
+              <img src={apiDjango} alt="apiDjango" className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-400" />
               {/* pretittle  */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-300 z-50">
+              <div className="absolute -bottom-full left-4 group-hover:bottom-14 transition-all duration-300 z-50">
                 <span className="text-gradient">
                   UI/UX Design
                 </span>
               </div>
 
               {/* tittle */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-8 transition-all duration-500 z-50">
+              <div className="absolute -bottom-full left-4 group-hover:bottom-8 transition-all duration-500 z-50">
                <span span className="text-xl text-white sombra">
                   Project Tittle
                 </span>
@@ -76,19 +77,19 @@ export default function Projects() {
             </div>    
 
             {/* image 3*/}
-            <div className="group w-[42%] mx-auto my-2 min-w-[200px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
+            <div className="group w-[42%] mx-auto my-2 min-w-[220px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
               {/* overlay */}
         
               <img src={apiDjango} alt="img1" className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-400" />
               {/* pretittle  */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-300 z-50">
+              <div className="absolute -bottom-full left-4 group-hover:bottom-14 transition-all duration-300 z-50">
                 <span className="text-gradient">
                   UI/UX Design
                 </span>
               </div>
 
               {/* tittle */}
-              <div className="absolute -bottom-full left-12 group-hover:bottom-8 transition-all duration-500 z-50">
+              <div className="absolute -bottom-full left-4 group-hover:bottom-8 transition-all duration-500 z-50">
                <span span className="text-xl text-white sombra">
                   Project Tittle
                 </span>
