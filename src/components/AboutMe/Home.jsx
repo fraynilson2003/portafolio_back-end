@@ -32,6 +32,15 @@ export default function Home() {
             Open Source
           </h1>
 
+          <p className='w-full text-green my-1 mb-2 font-secondary font-semibold text-xl px-4 text-center md:text-start '>
+            {"Developer:  "} <span className=' font-secondary text-font_primary font-semibold text-xl text-center md:text-start '>
+            Fray Toledo Tapia
+          </span>
+          </p>
+
+          
+
+
           <p className='w-full text-green my-1 font-secondary font-semibold text-xl px-4 text-center md:text-start '>
             {"Tecnologies fronted:  "}
           </p>

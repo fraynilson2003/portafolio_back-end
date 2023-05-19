@@ -7,7 +7,7 @@ import {BiHomeAlt, BiUser} from "react-icons/bi"
 
 import { Link } from "react-scroll"
 
-export default function Aside() {
+export default function AsideHome() {
   let [deployment, setDeployment] = useState(false)
 
 

@@ -5,15 +5,10 @@ import { fadeIn } from '../../helpers/variantsMotion'
 
 import KataraImg from "../../assets/avatarAng/splash-katara.png"
 import { optionLinks } from './NavAboutMe'
+import TextShpere from './TextShpere'
 
 export default function AboutMe() {
-
-
-  return (
-    <div id={optionLinks.about} className='flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 relative md:flex-row'>
-  
-      <div className='flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden md:relative absolute'>
-          <motion.div
+          {/* <motion.div
             variants={fadeIn("right", 0.4 )} 
             initial="hidden" 
             whileInView={"show"} 
@@ -27,6 +22,27 @@ export default function AboutMe() {
                   text-green hover:brightness-110" 
                 src={KataraImg} alt="Ang" />
             </div>
+
+
+          </motion.div> */}
+
+  return (
+    <div id={optionLinks.about} className='flex flex-col-reverse h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 relative md:flex-row'>
+  
+      <div className='flex items-center flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden relative'>
+         <motion.div
+            variants={fadeIn("right", 0.4 )} 
+            initial="hidden" 
+            whileInView={"show"} 
+            viewport={{once: false, amount:0.3}}
+            className='w-full flex flex-col  max-h-[300px] md:max-h-[300px] relative justify-center items-center h-full'>
+
+            {/* <h2 className='font-secondary text-2xl font-semibold'>
+              Hobbies
+            </h2>   */}
+            <TextShpere />
+
+  
 
 
           </motion.div>
@@ -52,14 +68,14 @@ export default function AboutMe() {
 
           <div className='flex flex-row mt-8 w-full justify-center font-semibold font-secondary text-base'>
             
-            <button className='w-[110px] mx-3 py-2 button-3 hover:brightness-125 rounded-full text-center'>
+            <button className='md:block hidden w-[110px] mx-3 py-2 button-3 hover:brightness-125 rounded-full text-center'>
               <a href='https://github.com/fraynilson2003' target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>
             </button>
       
 
-            <button className='w-[110px] mx-3 py-2 button-2 hover:brightness-125 rounded-full text-center'>
+            <button className='md:block hidden w-[110px] mx-3 py-2 button-2 hover:brightness-125 rounded-full text-center'>
             <a href='https://www.linkedin.com/in/fray-desarrolador/' target="_blank" rel="noopener noreferrer">
                 Linkedin
               </a>
