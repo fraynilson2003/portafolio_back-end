@@ -159,20 +159,20 @@ export default function TextShpere(){
         <span className="tagcloud-320px"></span>
       </div>
 
-      <div className="relative hidden aa:flex ss:hidden
+      <div className="relative hidden aa:flex ss:hidden  
       text-shpere top-0 w-[50px]  h-[50px] md:w-[100px] md:h-[100px] justify-center items-center ">
         <h2 className="absolute font-tertiary text-xl font-semibold">Hobbies</h2>
         <span className="tagcloud-320px"></span>
       </div>
 
-      <div className="relative hidden ss:flex sm:hidden
+      <div className="relative hidden ss:flex sm:hidden   
       text-shpere top-0 w-[50px]  h-[50px] md:w-[100px] md:h-[100px] justify-center items-center ">
         <h2 className="absolute font-tertiary text-xl font-semibold">Hobbies</h2>
         <span className="tagcloud-480px"></span>
       </div>
 
       
-      <div className="relative hidden sm:flex md:hidden
+      <div className="relative hidden sm:flex md:hidden   
       text-shpere top-0 w-[50px]  h-[50px] md:w-[100px] md:h-[100px] justify-center items-center ">
         <h2 className="absolute font-tertiary text-2xl font-semibold">Hobbies</h2>
         <span className="tagcloud-640px"></span>

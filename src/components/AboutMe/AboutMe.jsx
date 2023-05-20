@@ -27,22 +27,22 @@ export default function AboutMe() {
           </motion.div> */}
 
   return (
-    <div id={optionLinks.about} className='flex flex-col-reverse h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full justify-center max-w-[1400px] relative md:flex-row'>
+    <div id={optionLinks.about} className='flex flex-col-reverse h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full items-center justify-center max-w-[1400px] relative md:flex-row'>
   
-      <div className='flex items-center flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden relative z-[199]'>
+      <div className='flex  items-center px-3 w-full h-[200px]  md:w-[50%] md:h-full overflow-hidden relative z-[199]'>
          <motion.div
             variants={fadeIn("right", 0.4 )} 
             initial="hidden" 
             whileInView={"show"} 
             viewport={{once: false, amount:0.3}}
-            className='w-full flex flex-colmax-h-[300px] md:max-h-[300px] relative justify-center items-center h-full'>
+            className='w-full relative flex flex-col h-auto max-h-[300px] top-0 md:max-h-[300px] justify-center items-center md:h-full'>
 
             <TextShpere />
 
           </motion.div>
       </div>
 
-      <div className="flex-1 flex items-center  mx-6 md:w-[50%] h-full overflow-hidden  z-[115]">
+      <div className="w-full flex items-center  mx-6 md:w-[50%] md:h-full overflow-hidden  z-[115]">
         <motion.div
           variants={fadeIn("left", 0.4 )} 
           initial="hidden" 
