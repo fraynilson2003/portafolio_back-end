@@ -55,7 +55,7 @@ export default function NavAboutMe() {
           <Link 
           id='option-scroll'
           containerId="per-scroll"
-          to={optionLinks.services} 
+          to={optionLinks.work} 
           className="cursor-pointer w-[35px] h-[35px] flex items-center justify-center"
           activeClass='active-scroll'
           smooth={true}
@@ -66,7 +66,7 @@ export default function NavAboutMe() {
           <Link 
           id='option-scroll'
           containerId="per-scroll"
-          to={optionLinks.work} 
+          to={optionLinks.services} 
           className="cursor-pointer w-[35px] h-[35px] flex items-center justify-center"
           activeClass='active-scroll'
           smooth={true}

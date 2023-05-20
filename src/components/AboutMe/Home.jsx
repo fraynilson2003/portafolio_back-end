@@ -8,6 +8,7 @@ import AngImg from "../../assets/avatarAng/splash-ang.png"
 
 import { Tooltip } from 'react-tooltip';
 import { optionLinks } from './NavAboutMe';
+import { Link } from 'react-scroll';
 
 export default function Home() {
 
@@ -80,12 +81,24 @@ export default function Home() {
           <div className='flex flex-row mt-6 md:mt-4 w-full justify-center md:justify-start font-semibold font-secondary text-base 
             mb-20 md:mb-0'>
             
-            <button className='w-[110px] mx-3 py-2 button-1 hover:brightness-125 rounded-full text-center'>
+            {/* <button className='w-[110px] mx-3 py-2 button-1 hover:brightness-125 rounded-full text-center'>
               <a>
                   Contact me
               </a>
-            </button>
+            </button> */}
       
+            <Link 
+              id='option-scroll'
+              containerId="per-scroll"
+              to={optionLinks.services} 
+              className="w-[110px] mx-3 py-2 button-1 hover:brightness-125 rounded-full text-center"
+              smooth={true}
+              duration={800}
+              spy={true}>
+              Contact me
+
+            </Link>
+
 
             <button className='w-[110px] mx-3 py-2 button-2 hover:brightness-125 rounded-full text-center'>
             <a href='https://www.linkedin.com/in/fray-desarrolador/' target="_blank" rel="noopener noreferrer">

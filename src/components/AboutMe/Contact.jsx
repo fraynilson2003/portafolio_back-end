@@ -2,17 +2,23 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { fadeIn } from '../../helpers/variantsMotion'
 import { TypeAnimation } from 'react-type-animation'
+import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa"
 
 import ZukoImg from "../../assets/avatarAng/splash-zuko.png"
 import { optionLinks } from './NavAboutMe'
+import { BiCopyright } from 'react-icons/bi'
 
 export default function Contact() {
 
+  let submitForm = (event)=>{
+    event.preventDefault()
+  }
 
   return (
-    <div id={optionLinks.services} className='flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 relative md:flex-row max-w-[1400px]'>
+    <div id={optionLinks.services} className='flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full relative md:flex-row max-w-[1400px]'>
       
-      <div className='flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden md:relative absolute'>
+      {/* image zuko */}
+      <div className='flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden md:hidden absolute'>
         <motion.div
           variants={fadeIn("right", 0.4 )} 
           initial="hidden" 
@@ -33,36 +39,85 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      <div className="flex-1 flex items-center  mx-6 md:w-[50%] h-full overflow-hidden  z-[115]">
+
+
+      <div className="flex-1 flex flex-col md:flex-row justify-center items-center  mx-6 w-full h-full overflow-hidden max-w-[1400px] z-[115]">
+
         <motion.div
           variants={fadeIn("left", 0.4 )} 
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}
-          className='flex flex-col h-full items-center justify-center '>
+          className='flex flex-col w-full md:w-[50%] h-auto md:h-[400px] 
+            items-center justify-center  '>
 
-          <h1 className='flex justify-center mt-2 mb-16 px-4 md:pr-10 md:pl-2 text-3xl font-secondary text-center'>welcome to my portfolio</h1>
+          <h1 
+            className='flex justify-center mt-2 px-4 text-3xl 
+              md:mt-6 md:text-4xl font-cuarto text-center '>
+              Contact me
+          </h1>
 
+          <div className='w-full'>
 
-          <TypeAnimation 
-            sequence={[
-              "Python",
-              2000,
-              "Django",
-              2000,
-              "PostgresSQL",
-              2000,
-              "Django-rest",
-              2000
-            ]}
-            speed={50}
-            className="text-accent inline-block ml-2"
-            wrapper='div'
-            repeat={Infinity}/>
-
-            <p className="mt-4 px-4 md:pr-10 md:pl-2 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam molestiae magni enim vitae animi, illo amet facere neque ullam eos fugiat officia ex optio distinctio voluptatem consequuntur aliquid suscipit excepturi.</p>    
+          </div>   
 
         </motion.div>
+
+        <motion.div
+          variants={fadeIn("left", 0.4 )} 
+          initial="hidden" 
+          whileInView={"show"} 
+          viewport={{once: false, amount:0.3}}
+          className='flex flex-col w-full md:w-[50%] h-auto md:h-[400px]  items-center justify-start '>
+
+      
+
+          <form onSubmit={submitForm} className='w-full flex flex-col mt-4'>
+            <label htmlFor="email" className='w-full px-4 mt-4 font-secondary text-xl  md:px-8 '>
+              email
+            </label>
+            <input id='email' type="text" className='flex-1 mx-4  py-[2px] font-primary text-lg  bg-font_primary/0
+            md:mx-8   input-per container-input'/>
+
+            <label htmlFor="email" className='w-full px-4 mt-4 font-secondary text-xl  md:px-8 '>
+              message
+            </label>
+            <textarea id='email' placeholder='write message' type="text" className='flex-1 mx-4 min-h-[80px] py-[2px] font-primary text-lg pr-3 
+            md:mx-8   input-per  container-text-area' />
+
+            <div className='flex justify-center md:justify-start w-full'>
+              <button type='submit' className='mt-10 md:mt-6 px-3 py-2 mx-4  bg-red block font-secondary font-semibold rounded-lg hover:brightness-110 button-submit    
+              md:mx-8'>
+                Submit
+              </button>
+            </div>
+ 
+          </form>
+
+{/*           FaGithub, FaYoutube, FaLinkedin
+ */}
+          <div className='flex justify-center md:justify-start w-full gap-x-4 h-[50px]  mt-12 md:px-9 '>
+              <a className="cursor-pointer w-10" href="https://www.linkedin.com/in/fray-desarrolador/" >
+                <FaLinkedin className='scale-[1.6]'/>
+              </a> 
+
+              <a className='cursor-pointer w-10' href="https://github.com/fraynilson2003">
+                <FaGithub className='scale-[1.6]'/>
+              </a>  
+
+              <a className='cursor-pointer w-10' href="https://github.com/fraynilson2003">
+                <FaYoutube className='scale-[1.6]'/>
+              </a>          
+          </div>
+
+          <p>
+            <BiCopyright>
+              aa
+            </BiCopyright>
+          </p>
+
+        </motion.div>
+
       </div >
 
     </div>

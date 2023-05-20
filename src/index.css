@@ -34,3 +34,43 @@ body{
 
 }
 
+
+/* input contact */
+
+.input-per{
+  outline: none;
+  border-bottom: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.container-text-area::placeholder {
+  font-style: sans-serif; /* Estilo de fuente del placeholder */
+  color: #cccccca2; /* Color del texto del placeholder */
+  opacity: 0.5; /* Opacidad del placeholder */
+}
+
+.container-text-area::-webkit-scrollbar{
+  background-color: rgb(179, 176, 176);
+  height: 100%;
+  border-radius: 5px;
+  width: 8px;
+
+}
+
+.container-text-area::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: #333333;
+
+}
+
+
+.button-submit{
+  background: linear-gradient(
+      86.23deg,
+      #224e45a8 21.43%,
+      #0c3d399d 50.63%,
+      #0c5f5379 100%,
+      #0eaf7488 117.04%
+  );
+  
+}
