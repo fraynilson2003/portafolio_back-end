@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import TagCloud from "TagCloud";
   
 export default function TextShpere(){
+  const containerRef = useRef(null);
+
+
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [classScreen, setClassScreen] = useState("tagcloud-320px");
@@ -10,93 +13,89 @@ export default function TextShpere(){
 
 
   useEffect(() => {
-    return () => {
+    const container_320 = ".tagcloud-320px";
+    const container_480 = ".tagcloud-480px";
+    const container_640 = ".tagcloud-640px";
+    const container_768 = ".tagcloud-768px";
+    const container_960 = ".tagcloud-960px";
+    const container_1200 = ".tagcloud-1200px";
 
-      const container_320 = ".tagcloud-320px";
-      const container_480 = ".tagcloud-480px";
-      const container_640 = ".tagcloud-640px";
-      const container_768 = ".tagcloud-768px";
-      const container_960 = ".tagcloud-960px";
-      const container_1200 = ".tagcloud-1200px";
-
-      const texts = [
-        "Soccer",
-        "Music",
-        "Read books",
-        "Coding",
-        "3D modeling",
-        "Video editing",
-        "Cooking",
-        "Write",
-        "Movie-watching",
-        
-        "Collecting",
-        "Gaming",
-        "Digital sculpting",
-        "Baking",
-    
-      ]
-    
-      const texts0 = [
-        "Soccer",
-        "Music",
-        "Read",
-        "Coding",
-        "3D",
-        "Gaming",
-        "Write",
-        "Cooking",
-      ]
-
-      const options_320  = {
-        radius: 100,
-        maxSpeed: "fast",
-        initSpeed: "normal",
-        keep: true,
-      };
-      const options_480  = {
-        radius: 120,
-        maxSpeed: "fast",
-        initSpeed: "normal",
-        keep: true,
-      };
-      const options_640  = {
-        radius: 140,
-        maxSpeed: "fast",
-        initSpeed: "normal",
-        keep: true,
-      };
-      const options_768  = {
-        radius: 220,
-        maxSpeed: "fast",
-        initSpeed: "normal",
-        containerClass: "tagcloud-768px",
-        keep: true,
-      };
-      const options_960  = {
-        containerClass: "tagcloud-960px",
-        radius: 250,
-        maxSpeed: "fast",
-        initSpeed: "normal",
-        keep: true,
-      };
-      const options_1200 = {
-        radius: 290,
-        maxSpeed: "fast",
-        initSpeed: "normal",
-        keep: true,
-      };
-
+    const texts = [
+      "Soccer",
+      "Music",
+      "Read books",
+      "Coding",
+      "3D modeling",
+      "Video editing",
+      "Cooking",
+      "Write",
+      "Movie-watching",
       
-      TagCloud(container_320, texts0, options_320);
-      TagCloud(container_480, texts0, options_480);
-      TagCloud(container_640, texts0, options_640);
-      TagCloud(container_768, texts, options_768);
-      TagCloud(container_960, texts, options_960);
-      TagCloud(container_1200, texts, options_1200);
+      "Collecting",
+      "Gaming",
+      "Digital sculpting",
+      "Baking",
+  
+    ]
+  
+    const texts0 = [
+      "Soccer",
+      "Music",
+      "Read",
+      "Coding",
+      "3D",
+      "Gaming",
+      "Write",
+      "Cooking",
+    ]
 
-
+    const options_320  = {
+      radius: 100,
+      maxSpeed: "fast",
+      initSpeed: "normal",
+      keep: true,
     };
+    const options_480  = {
+      radius: 120,
+      maxSpeed: "fast",
+      initSpeed: "normal",
+      keep: true,
+    };
+    const options_640  = {
+      radius: 140,
+      maxSpeed: "fast",
+      initSpeed: "normal",
+      keep: true,
+    };
+    const options_768  = {
+      radius: 220,
+      maxSpeed: "fast",
+      initSpeed: "normal",
+      containerClass: "tagcloud-768px",
+      keep: true,
+    };
+    const options_960  = {
+      containerClass: "tagcloud-960px",
+      radius: 250,
+      maxSpeed: "fast",
+      initSpeed: "normal",
+      keep: true,
+    };
+    const options_1200 = {
+      radius: 290,
+      maxSpeed: "fast",
+      initSpeed: "normal",
+      keep: true,
+    };
+
+    
+    TagCloud(container_320, texts0, options_320);
+    TagCloud(container_480, texts0, options_480);
+    TagCloud(container_640, texts0, options_640);
+    TagCloud(container_768, texts, options_768);
+    TagCloud(container_960, texts, options_960);
+    TagCloud(container_1200, texts, options_1200);
+
   }, []);
 
   // Función para actualizar el ancho de la pantalla en el estado
