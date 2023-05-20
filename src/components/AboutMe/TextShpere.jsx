@@ -70,9 +70,11 @@ export default function TextShpere(){
         radius: 220,
         maxSpeed: "fast",
         initSpeed: "normal",
+        containerClass: "tagcloud-768px",
         keep: true,
       };
       const options_960  = {
+        containerClass: "tagcloud-960px",
         radius: 250,
         maxSpeed: "fast",
         initSpeed: "normal",
@@ -85,6 +87,7 @@ export default function TextShpere(){
         keep: true,
       };
 
+      
       TagCloud(container_320, texts0, options_320);
       TagCloud(container_480, texts0, options_480);
       TagCloud(container_640, texts0, options_640);
