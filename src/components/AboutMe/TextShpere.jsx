@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import "./TextShpere.css";
 import TagCloud from "TagCloud";
   
-
 export default function TextShpere(){
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
