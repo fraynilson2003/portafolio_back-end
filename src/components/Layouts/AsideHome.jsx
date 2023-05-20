@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AvatarIcon, Copyicon } from "../../SVG/icons";
 import { optionLinks } from "../AboutMe/NavAboutMe";
+import { VscChecklist } from "react-icons/vsc";
 
 import { BsBriefcase, BsChatSquareText} from "react-icons/bs"
 import {BiHomeAlt, BiUser} from "react-icons/bi"
@@ -42,7 +43,18 @@ export default function AsideHome() {
               <Link 
               id='option-scroll'
               containerId="per-scroll"
-              to={optionLinks.services} 
+              to={optionLinks.skills} 
+              className="cursor-pointer ml-[2px] w-[44px] mx-auto h-[46px] flex items-center justify-center"
+              activeClass='active-2-scroll  w-[46px]'
+              smooth={true}
+              spy={true}>
+                <VscChecklist className="scale-[1.3]"/>
+              </Link>
+
+              <Link 
+              id='option-scroll'
+              containerId="per-scroll"
+              to={optionLinks.work} 
               className="cursor-pointer ml-[2px] w-[44px] mx-auto h-[46px] flex items-center justify-center"
               activeClass='active-2-scroll  w-[46px]'
               smooth={true}
@@ -50,10 +62,11 @@ export default function AsideHome() {
                 <BsBriefcase className="scale-[1.3]"/>
               </Link>
 
+
               <Link 
               id='option-scroll'
               containerId="per-scroll"
-              to={optionLinks.work} 
+              to={optionLinks.services} 
               className="cursor-pointer ml-[2px] w-[44px] mx-auto h-[46px] flex items-center justify-center"
               activeClass='active-2-scroll  w-[46px]'
               smooth={true}

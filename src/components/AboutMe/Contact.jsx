@@ -10,7 +10,7 @@ export default function Contact() {
 
 
   return (
-    <div id={optionLinks.work} className='flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 relative md:flex-row'>
+    <div id={optionLinks.services} className='flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 relative md:flex-row max-w-[1400px]'>
       
       <div className='flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden md:relative absolute'>
         <motion.div
@@ -21,7 +21,7 @@ export default function Contact() {
           className='w-full flex justify-center items-center h-full'  
           >
 
-          <div className="w-full flex justify-center h-[90%] overflow-hidden relative ">
+          <div className="w-full flex justify-center h-[90%] max-h-[500px] overflow-hidden relative">
             <img 
               className="object-contain h-full rounded-lg brightness-[0.2] md:brightness-95 filter drop-shadow-2xl
               text-green hover:brightness-105" 

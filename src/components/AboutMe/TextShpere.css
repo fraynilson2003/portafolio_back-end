@@ -3,7 +3,8 @@
 
 
 
-.tagcloud {
+.tagcloud-320px, .tagcloud-480px, .tagcloud-640px, .tagcloud-768px,
+.tagcloud-960px, .tagcloud-1200px {
     display: inline-block;
     top: 0;
     left: 0;
@@ -11,14 +12,16 @@
     font-weight: 600;
     letter-spacing: 0.0625em;
     font-size: 1em;
+    color: #00ffffff;
+
 }
 
 /* Change color of each text in sphere on hover   */
-.tagcloud--item {
+/* .tagcloud-320px--item {
     color: #00ffffff;
     text-transform: uppercase;
 }
+.tagcloud-320px--item:hover {
+    color: #08c456;
+} */
 
-.tagcloud--item:hover {
-    color: #ff6347;
-}
