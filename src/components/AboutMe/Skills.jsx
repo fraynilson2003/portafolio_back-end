@@ -27,7 +27,7 @@ export default function Skills() {
 
 
   return (
-    <div id={optionLinks.skills} className='flex flex-col-reverse h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full justify-center max-w-[1400px] relative md:flex-row'>
+    <div id={optionLinks.skills} className='flex flex-col-reverse h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full justify-center  max-w-[1400px] relative md:flex-row'>
   
       <div className="flex-1 flex items-center mx-1 md:mx-6 md:w-[50%] justify-center h-full overflow-hidden z-[115] font-primary ">
         <motion.div
@@ -49,11 +49,11 @@ export default function Skills() {
             {"Tecnologies fronted:  "}
           </p>*/}
 
-          <p className='w-full mt-3 md:mt-10  mb-2 font-secondary font-semibold text-xl px-8 text-center md:text-start '>
-            TS & JS & React & Tailwind
-          </p> 
+          {/* <p className='w-full mt-3 md:mt-10  mb-2 font-secondary font-semibold text-md md:text-xl px-8 text-center md:text-start '>
+            Main skills:          
+          </p>  */}
 
-          <div className='flex flex-wrap text-sm justify-between items-stretch gap-2 w-full h-[60vh] md:h-[250px] p-4'>
+          <div className='flex flex-wrap text-sm mt-6 md:mt-10 justify-center items-stretch gap-2 w-full h-[60vh] md:h-[250px] p-4'>
             
 
             <div className='flex flex-col justify-center items-center w-[100px] h-[60px] bga'>
