@@ -91,7 +91,7 @@ export default function Home() {
               id='option-scroll'
               containerId="per-scroll"
               to={optionLinks.services} 
-              className="w-[110px] mx-3 py-2 button-1 hover:brightness-125 rounded-full text-center"
+              className="w-[110px] mx-3 py-2 button-1 hover:brightness-125 rounded-full text-center cursor-pointer"
               smooth={true}
               duration={800}
               spy={true}>
