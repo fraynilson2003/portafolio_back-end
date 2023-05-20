@@ -29,7 +29,7 @@ export default function AboutMe() {
   return (
     <div id={optionLinks.about} className='flex flex-col-reverse h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full justify-center max-w-[1400px] relative md:flex-row'>
   
-      <div className='flex items-center flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden relative'>
+      <div className='flex items-center flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden relative z-[199]'>
          <motion.div
             variants={fadeIn("right", 0.4 )} 
             initial="hidden" 
@@ -37,13 +37,7 @@ export default function AboutMe() {
             viewport={{once: false, amount:0.3}}
             className='w-full flex flex-colmax-h-[300px] md:max-h-[300px] relative justify-center items-center h-full'>
 
-            {/* <h2 className='font-secondary text-2xl font-semibold'>
-              Hobbies
-            </h2>   */}
             <TextShpere />
-
-  
-
 
           </motion.div>
       </div>
