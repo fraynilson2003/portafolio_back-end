@@ -1,35 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 import "./TextShpere.css";
-
-// Importing TagCloud package
 import TagCloud from "TagCloud";
   
 
 export default function TextShpere(){
-  // Animation settings for Text Cloud
 
-
-
-
-
-  // const texts = [
-  //   "JavaScript",
-  //   "TypeScript",
-  //   "Python",
-  //   "Express",
-  //   "Django",
-  //   "SQL",
-  //   "HTML",
-  //   "CSS",
-  //   "React",
-  //   "NodeJS",
-  //   "GIT",
-  //   "GITHUB",
-  //   "Node.js"
-  // ];
-
-
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [classScreen, setClassScreen] = useState("tagcloud-320px");
   
 
 
@@ -120,9 +98,6 @@ export default function TextShpere(){
     };
   }, []);
 
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-  const [classScreen, serClassScreen] = useState("tagcloud-320px");
-
   // Función para actualizar el ancho de la pantalla en el estado
   const updateScreenWidth = () => {
     let width = window.innerWidth
@@ -131,15 +106,15 @@ export default function TextShpere(){
     if(width < 320){
       return("tagcloud-320px")
     }else if(width < 480){
-      serClassScreen("tagcloud-480px")
+      setClassScreen("tagcloud-480px")
     }else if(width < 640){
-      serClassScreen("tagcloud-640px")
+      setClassScreen("tagcloud-640px")
     }else if(width < 768){
-      serClassScreen("tagcloud-768px")
+      setClassScreen("tagcloud-768px")
     }else if(width < 960){
-      serClassScreen("tagcloud-960px")
+      setClassScreen("tagcloud-960px")
     }else if(width < 1200){
-      serClassScreen("tagcloud-1200px")
+      setClassScreen("tagcloud-1200px")
     }
 
   };
