@@ -3,10 +3,11 @@ import AsideHome from './AsideHome'
 import DjangoApp from '../../apps/apis/DjangoPython/DjangoApp'
 import { sectionsApp } from './constants'
 import About from '../AboutMe/About'
-import { Route, Routes } from 'react-router-dom'
 import AsideApp2 from './AsideApp2'
+import { useSelector } from 'react-redux'
 
-export default function Hero({ section }) {
+export default function Hero() {
+  let stateSectionApp = useSelector(state=>state.stateSectionApp)
 
 
   return (
@@ -14,14 +15,14 @@ export default function Hero({ section }) {
 
 
 
-      {section == sectionsApp.aboutMe? (
+      {stateSectionApp == sectionsApp.aboutMe? (
         <>
           <AsideHome/>
           <About/>
         </>
       ):<></>}
 
-      {section == sectionsApp.myProject_2? (
+      {stateSectionApp == sectionsApp.myProject_2? (
         <>
           <AsideApp2/>
           <div className='flex-1'>

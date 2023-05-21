@@ -110,10 +110,8 @@ export default function Contact() {
               </a>          
           </div>
 
-          <p>
-            <BiCopyright>
-              aa
-            </BiCopyright>
+          <p className='block mt-5 w-full text-center md:text-start  md:px-8'>
+            Copyright © 2023 FTT
           </p>
 
         </motion.div>

@@ -1,11 +1,13 @@
 import { CONSTANTS_APP } from "../../apps/apis/DjangoPython/redux/constants";
 import { typeOptions } from "../../apps/apis/DjangoPython/requestUser/Entities";
+import { sectionsApp } from "../../components/Layouts/constants";
 import { CONSTANTS } from "../actions/constant";
 
 
 const initialState = {
   userApp01: {},
   selectEnities: typeOptions.GET,
+  stateSectionApp: sectionsApp.aboutMe,
 
   allCategoriesApp01: [],
   resultApp01: {
@@ -18,7 +20,14 @@ const initialState = {
   
   export const rootReducer = (state = initialState, action)=>{
     switch (action.type) {
-      //LOGIN
+      //options sections
+      case CONSTANTS.STATE_OPTION_SECTION_APP:
+        return{
+          ...state,
+          stateSectionApp: action.payload
+        }
+
+      //LOGIN APP 01
       case CONSTANTS_APP.LOGIN_APP_01:
         return{
           ...state,

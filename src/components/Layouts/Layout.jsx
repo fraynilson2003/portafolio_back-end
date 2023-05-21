@@ -17,12 +17,9 @@ const Layout = () => {
 
   return (
     <div className="realtive flex flex-col justify-between w-full h-screen">
-      <NavBar
-        section={section}
-        setSection={setSection}/>
+      <NavBar />
 
-      <Hero
-        section={section}/>
+      <Hero />
 
       <Bottom/>
     </div>

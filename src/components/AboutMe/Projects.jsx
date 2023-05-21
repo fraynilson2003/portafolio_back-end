@@ -8,9 +8,16 @@ import apiDjango from "../../assets/projects/api django.png"
 import appVideogames from "../../assets/projects/app videogames.png"
 
 import { optionLinks } from './NavAboutMe'
+import { putStateSectionApp } from '../../redux/actions/actions'
+import { useDispatch } from 'react-redux'
+import { sectionsApp } from '../Layouts/constants'
 
 export default function Projects() {
+  let dispatch = useDispatch()
 
+  const changeSection = (section)=>{
+    dispatch(putStateSectionApp(section))
+  }
 
   return (
     <div id={optionLinks.work} className='flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 relative md:flex-row max-w-[1400px]'>
@@ -58,7 +65,7 @@ export default function Projects() {
 
           <div className='flex flex-wrap h-auto w-full mt-6s md:mt-3 gap-2'>
             {/* image 1*/}
-            <div className="group w-[42%] max-w-[240px] mx-auto my-2 min-w-[220px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
+            <div className="group w-[42%] max-w-[240px] mx-auto my-2 min-w-[220px]  relative overflow-hidden border-2 border-white/50 rounded-xl">
               {/* overlay */} 
               <img src={appVideogames} alt="apiDjango" className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-400" />
               {/* pretittle  */}
@@ -80,7 +87,9 @@ export default function Projects() {
             </div>
 
             {/* image 2*/}
-            <div className="group w-[42%] max-w-[240px] mx-auto my-2 min-w-[220px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
+            <div 
+              
+              className="group w-[42%] max-w-[240px] mx-auto my-2  min-w-[220px] relative overflow-hidden border-2 border-white/50 rounded-xl">
               {/* overlay */}
         
               <img src={apiDjango} alt="apiDjango" className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-400" />
@@ -92,7 +101,9 @@ export default function Projects() {
               </div>
 
               {/* tittle */}
-              <div className="absolute -bottom-full left-4 group-hover:bottom-8 transition-all duration-500 z-50">
+              <div 
+                onClick={()=>changeSection(sectionsApp.myProject_2)}
+                className="absolute -bottom-full cursor-pointer left-4 group-hover:bottom-8 transition-all duration-500 z-50">
                <span span className="text-xl text-white sombra">
                   Project Tittle
                 </span>
@@ -101,7 +112,7 @@ export default function Projects() {
             </div>    
 
             {/* image 3*/}
-            <div className="group w-[42%] max-w-[240px] mx-auto my-2 min-w-[220px] bg-red/50 relative overflow-hidden border-2 border-white/50 rounded-xl">
+            <div className="group w-[42%] max-w-[240px] mx-auto my-2 min-w-[220px]  relative overflow-hidden border-2 border-white/50 rounded-xl">
               {/* overlay */}
         
               <img src={apiDjango} alt="img1" className="group-hover:scale-125 group-hover:brightness-50 transition-all duration-400" />
