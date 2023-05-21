@@ -28,28 +28,28 @@ export default function NavBar() {
       <li className='flex flex-row items-center min-h-[20px] h-[20px] font-primary text-[12px] text-font_primary font-semibold'>
         <ul 
           onClick={()=>changeSection(sectionsApp.aboutMe)}
-          className={`block px-2 cursor-pointer h-full ${stateSectionApp === sectionsApp.aboutMe? "bg-font_trans/40" : ""}`}>
+          className={`block px-2  text-center cursor-pointer h-full ${stateSectionApp === sectionsApp.aboutMe? "bg-font_trans/40" : ""}`}>
               About me
         </ul>
 
-        <ul 
+        {/* <ul 
           onClick={()=>changeSection(sectionsApp.myProject_1)}
           className={`block px-2 cursor-pointer h-full ${stateSectionApp === sectionsApp.myProject_1? "bg-font_trans/40" : ""}`}>
       
             My project 1
 
-        </ul>
+        </ul> */}
 
         <ul 
           onClick={()=>changeSection(sectionsApp.myProject_2)}
-          className={`block px-2 cursor-pointer h-full ${stateSectionApp === sectionsApp.myProject_2? "bg-font_trans/40" : ""}`}>
-            My project 2
+          className={`block px-2 text-center cursor-pointer h-full ${stateSectionApp === sectionsApp.myProject_2? "bg-font_trans/40" : ""}`}>
+            Project api
         </ul>
 
         <ul 
           onClick={()=>changeSection(sectionsApp.skills)}
-          className={`block px-2 cursor-pointer h-full ${stateSectionApp === sectionsApp.skills? "bg-font_trans/40" : ""}`}>
-          Skills
+          className={`block px-2  text-center cursor-pointer h-full ${stateSectionApp === sectionsApp.skills? "bg-font_trans/40" : ""}`}>
+           Developing
         </ul>
 
       </li>

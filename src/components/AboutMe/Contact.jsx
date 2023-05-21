@@ -1,4 +1,5 @@
 import React from 'react'
+import { useFormik } from "formik"
 import { motion } from "framer-motion"
 import { fadeIn } from '../../helpers/variantsMotion'
 import { TypeAnimation } from 'react-type-animation'
@@ -7,11 +8,38 @@ import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa"
 import ZukoImg from "../../assets/avatarAng/splash-zuko.png"
 import { optionLinks } from './NavAboutMe'
 import { BiCopyright } from 'react-icons/bi'
+import { SchemaContact } from './schemaContact'
 
 export default function Contact() {
 
-  let submitForm = (event)=>{
-    event.preventDefault()
+  const {
+    values,
+    setValues,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    errors,
+    touched,
+    isValid,
+  } = useFormik({
+    initialValues: {
+      email: "",
+      message: "",
+    },
+    validationSchema: SchemaContact(),
+    onSubmit: (values, { resetForm }) => {
+      submitForm(values)
+      resetForm();
+    },
+  });
+
+
+  let submitForm = (values)=>{
+    console.log("******************************************");
+    console.log("Form enviado");
+    console.log(values);
+    console.log("******************************************");
+
   }
 
   return (
@@ -41,14 +69,14 @@ export default function Contact() {
 
 
 
-      <div className="flex-1 flex flex-col md:flex-row justify-center items-center  mx-6 w-full h-full overflow-hidden max-w-[1400px] z-[115]">
+      <div className="flex-1 relative flex flex-col md:flex-row justify-center items-center  mx-6 w-full h-full overflow-hidden max-w-[1400px] z-[115]">
 
         <motion.div
           variants={fadeIn("left", 0.4 )} 
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}
-          className='flex flex-col w-full md:w-[50%] h-auto md:h-[400px] 
+          className='flex flex-col w-full md:w-[50%] h-auto md:h-[420px]
             items-center justify-center  '>
 
           <h1 
@@ -68,35 +96,67 @@ export default function Contact() {
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}
-          className='flex flex-col w-full md:w-[50%] h-auto md:h-[400px]  items-center justify-start '>
+          className='flex flex-col w-full md:w-[50%] h-auto md:h-[420px]  items-center justify-start '>
 
       
 
-          <form onSubmit={submitForm} className='w-full flex flex-col mt-4'>
-            <label htmlFor="email" className='w-full px-4 mt-4 font-secondary text-xl  md:px-8 '>
-              email
-            </label>
-            <input id='email' type="text" className='flex-1 mx-4  py-[2px] font-primary text-lg  bg-font_primary/0
-            md:mx-8   input-per container-input'/>
+          <form onSubmit={handleSubmit} className='w-full flex flex-col mt-4 '>
 
-            <label htmlFor="email" className='w-full px-4 mt-4 font-secondary text-xl  md:px-8 '>
-              message
-            </label>
-            <textarea id='email' placeholder='write message' type="text" className='flex-1 mx-4 min-h-[80px] py-[2px] font-primary text-lg pr-3 
-            md:mx-8   input-per  container-text-area' />
+          <div className='px-4 flex-col w-full z-[500] h-[90px]  mt-4  md:px-8'>
+            <label htmlFor="email" className='w-full  font-secondary text-xl'>
+                email
+              </label>
+              <input 
+                id='email' 
+                type="text" 
+                values={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className='w-full  py-[2px] font-primary text-lg  bg-font_primary/0
+                input-per container-input'/>
 
-            <div className='flex justify-center md:justify-start w-full'>
-              <button type='submit' className='mt-10 md:mt-6 px-3 py-2 mx-4  bg-red block font-secondary font-semibold rounded-lg hover:brightness-110 button-submit    
-              md:mx-8'>
+              {errors.email && touched.email ? (
+                <p className="text-bottom_barra text-md font-semibold font-primary">
+                  {errors.email}
+                </p>
+              ) : null}
+          </div>
+
+            <div className='flex px-4 flex-col w-full h-[140px] max-h-[190px] md:px-8 '>
+              <label htmlFor="message" className='w-full  font-secondary text-xl'>
+                message
+              </label>
+
+              <textarea 
+                id='message' 
+                placeholder='write message' 
+                type="text" 
+                values={values.message}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className='w-full  min-h-[80px] max-h-[120px] py-[2px] font-primary text-lg pr-3 
+                  input-per  container-text-area' />
+
+              {errors.message && touched.message ? (
+                <p className="text-bottom_barra text-md text-md font-semibold font-primary">
+                  {errors.message}
+                </p>
+              ) : null}
+            </div>
+
+   
+
+            <div className='flex justify-center md:justify-start w-full py-2 px-4 md:px-8'>
+              <button type='submit' className='px-3 py-2  flex justify-center font-secondary font-semibold rounded-lg hover:brightness-110 button-submit    
+              '>
                 Submit
               </button>
             </div>
  
           </form>
 
-{/*           FaGithub, FaYoutube, FaLinkedin
- */}
-          <div className='flex justify-center md:justify-start w-full gap-x-4 h-[50px]  mt-12 md:px-9 '>
+
+          <div className='flex justify-center md:justify-start w-full gap-x-4 h-[50px]  mt-6 md:mt-4 md:px-9 '>
               <a className="cursor-pointer w-10" href="https://www.linkedin.com/in/fray-desarrolador/" >
                 <FaLinkedin className='scale-[1.6]'/>
               </a> 
@@ -110,11 +170,12 @@ export default function Contact() {
               </a>          
           </div>
 
-          <p className='block mt-5 w-full text-center md:text-start  md:px-8'>
-            Copyright © 2023 FTT
-          </p>
-
         </motion.div>
+
+        {/* Copyright */}
+        <p className='absolute bottom-[80px] w-full text-center'>
+            Copyright © 2023 FTT
+        </p>
 
       </div >
 
