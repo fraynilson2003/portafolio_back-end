@@ -173,10 +173,15 @@ export default function Contact() {
         </motion.div>
 
         {/* Copyright */}
-        <p className='absolute bottom-[80px] w-full text-center'>
+        <motion.p
+          variants={fadeIn("up", 0.2 )} 
+          initial="hidden" 
+          whileInView={"show"} 
+          viewport={{once: false, amount:0.2}}
+          className='absolute bottom-[80px] w-full text-center'>
             Copyright © 2023 FTT
-        </p>
-
+        </motion.p>
+        
       </div >
 
     </div>
