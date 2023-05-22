@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useFormik } from "formik"
 import { motion } from "framer-motion"
 import { fadeIn } from '../../helpers/variantsMotion'
@@ -11,6 +11,10 @@ import { BiCopyright } from 'react-icons/bi'
 import { SchemaContact } from './schemaContact'
 
 export default function Contact() {
+  let initialValues = {
+    email: "",
+    message: "",
+  }
 
   const {
     values,
@@ -20,12 +24,8 @@ export default function Contact() {
     handleSubmit,
     errors,
     touched,
-    isValid,
   } = useFormik({
-    initialValues: {
-      email: "",
-      message: "",
-    },
+    initialValues: initialValues,
     validationSchema: SchemaContact(),
     onSubmit: (values, { resetForm }) => {
       submitForm(values)
@@ -102,25 +102,26 @@ export default function Contact() {
 
           <form onSubmit={handleSubmit} className='w-full flex flex-col mt-4 '>
 
-          <div className='px-4 flex-col w-full z-[500] h-[90px]  mt-4  md:px-8'>
-            <label htmlFor="email" className='w-full  font-secondary text-xl'>
-                email
-              </label>
-              <input 
-                id='email' 
-                type="text" 
-                values={values.email}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                className='w-full  py-[2px] font-primary text-lg  bg-font_primary/0
-                input-per container-input'/>
+            <div className='px-4 flex-col w-full z-[500] h-[90px]  mt-4  md:px-8'>
+              <label htmlFor="email" className='w-full  font-secondary text-xl'>
+                  email
+                </label>
+                <input 
+                  id='email' 
+                  type="text" 
+                  name="email" 
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  className='w-full  py-[2px] font-primary text-lg  bg-font_primary/0
+                  input-per container-input'/>
 
-              {errors.email && touched.email ? (
-                <p className="text-bottom_barra text-md font-semibold font-primary">
-                  {errors.email}
-                </p>
-              ) : null}
-          </div>
+                {errors.email && touched.email ? (
+                  <p className="text-bottom_barra text-md font-semibold font-primary">
+                    {errors.email}
+                  </p>
+                ) : null}
+            </div>
 
             <div className='flex px-4 flex-col w-full h-[140px] max-h-[190px] md:px-8 '>
               <label htmlFor="message" className='w-full  font-secondary text-xl'>
@@ -130,8 +131,9 @@ export default function Contact() {
               <textarea 
                 id='message' 
                 placeholder='write message' 
+                name='message'
                 type="text" 
-                values={values.message}
+                value={values.message}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 className='w-full  min-h-[80px] max-h-[120px] py-[2px] font-primary text-lg pr-3 
@@ -147,9 +149,10 @@ export default function Contact() {
    
 
             <div className='flex justify-center md:justify-start w-full py-2 px-4 md:px-8'>
-              <button type='submit' className='px-3 py-2  flex justify-center font-secondary font-semibold rounded-lg hover:brightness-110 button-submit    
-              '>
-                Submit
+              <button  
+                type="submit" 
+                 className='px-3 py-2  flex justify-center font-secondary font-semibold rounded-lg hover:brightness-110 button-submit'>
+                  Submit
               </button>
             </div>
  
