@@ -9,6 +9,9 @@ import ZukoImg from "../../assets/avatarAng/splash-zuko.png"
 import { optionLinks } from './NavAboutMe'
 import { BiCopyright } from 'react-icons/bi'
 import { SchemaContact } from './schemaContact'
+import axios from 'axios'
+
+const URL_API = "http://localhost:3008"
 
 export default function Contact() {
   let initialValues = {
@@ -39,7 +42,21 @@ export default function Contact() {
     console.log("Form enviado");
     console.log(values);
     console.log("******************************************");
+    sendMessage(values)
+  }
 
+  let sendMessage = async (body)=>{
+    try {
+      let objBody = {...body}
+      let response = await axios.post(`${URL_API}/email/`, objBody)
+      alert("message sent successfully")
+    } catch (error) {
+      alert("error sent successfully")
+      console.log("+++++++++++++++++++++++++++++++++++++");
+      console.log(error);
+      console.log("+++++++++++++++++++++++++++++++++++++");
+
+    }
   }
 
   return (
