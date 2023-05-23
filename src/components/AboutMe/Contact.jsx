@@ -172,16 +172,16 @@ export default function Contact() {
           </form>
 
 
-          <div className='flex justify-center md:justify-start w-full gap-x-4 h-[50px]  mt-6 md:mt-4 md:px-9 '>
-              <a className="cursor-pointer w-10" href="https://www.linkedin.com/in/fray-desarrolador/" target="_blank" rel="noopener noreferrer">
+          <div className='flex justify-center md:justify-start  w-full gap-x-4 h-[30px]  mt-6 md:mt-4 md:px-6'>
+              <a className="flex justify-center items-center cursor-pointer w-10 text-center" href="https://www.linkedin.com/in/fray-desarrolador/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className='scale-[1.6]'/>
               </a> 
 
-              <a className='cursor-pointer w-10' href="https://github.com/fraynilson2003" target="_blank" rel="noopener noreferrer">
+              <a className='flex justify-center items-center cursor-pointer w-10 text-center' href="https://github.com/fraynilson2003" target="_blank" rel="noopener noreferrer">
                 <FaGithub className='scale-[1.6]'/>
               </a>  
 
-              <a className='cursor-pointer w-10' href="https://github.com/fraynilson2003" target="_blank" rel="noopener noreferrer">
+              <a className='flex justify-center items-center cursor-pointer w-10 text-center' href="https://github.com/fraynilson2003" target="_blank" rel="noopener noreferrer">
                 <FaYoutube className='scale-[1.6]'/>
               </a>          
           </div>

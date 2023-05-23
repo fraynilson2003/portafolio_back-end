@@ -29,7 +29,7 @@ export default function Home() {
 
           <h1 
             className='flex justify-center mt-2 mb-10 px-4 text-3xl md:text-4xl font-cuarto text-center '>
-            Backend Developer & Fronted Developer <br />
+            Backend Developer & Frontend Developer <br />
             Open Source
           </h1>
 
@@ -43,7 +43,7 @@ export default function Home() {
 
 
           <p className='w-full text-green my-1 font-secondary font-semibold text-xl px-4 text-center md:text-start '>
-            {"Tecnologies fronted:  "}
+            {"Frontend Technologies:  "}
           </p>
 
           <p className='w-full  mb-2 font-secondary font-semibold text-xl px-4 text-center md:text-start '>
@@ -55,7 +55,7 @@ export default function Home() {
             data-tooltip-id="my-tooltip"
             data-tooltip-html={ReactDOMServer.renderToStaticMarkup(<div>greater ability as <b>backend</b> developer</div>)}
             className='w-full text-green  my-1 font-secondary font-semibold text-xl px-4 text-center md:text-start '>
-            {"Tecnologies backend:  "}
+            {"Backend Technologies:  "}
           </p>
 
           <Tooltip  id="my-tooltip" />
