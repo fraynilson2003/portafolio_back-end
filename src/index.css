@@ -94,7 +94,14 @@ body{
     font-size: 1em;
     color: #00ffffff;
 
+} 
+
+.tagcloud--item:hover {
+
+  color: rgb(12, 146, 255);
+
 }
+
 
 /* Change color of each text in sphere on hover   */
 /* .tagcloud-320px--item {

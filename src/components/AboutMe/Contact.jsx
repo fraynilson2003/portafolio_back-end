@@ -11,7 +11,7 @@ import { BiCopyright } from 'react-icons/bi'
 import { SchemaContact } from './schemaContact'
 import axios from 'axios'
 
-const URL_API = "http://localhost:3008"
+const URL_API = "https://apiemail-production.up.railway.app"
 
 export default function Contact() {
   let initialValues = {
@@ -38,10 +38,6 @@ export default function Contact() {
 
 
   let submitForm = (values)=>{
-    console.log("******************************************");
-    console.log("Form enviado");
-    console.log(values);
-    console.log("******************************************");
     sendMessage(values)
   }
 
@@ -177,15 +173,15 @@ export default function Contact() {
 
 
           <div className='flex justify-center md:justify-start w-full gap-x-4 h-[50px]  mt-6 md:mt-4 md:px-9 '>
-              <a className="cursor-pointer w-10" href="https://www.linkedin.com/in/fray-desarrolador/" >
+              <a className="cursor-pointer w-10" href="https://www.linkedin.com/in/fray-desarrolador/" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin className='scale-[1.6]'/>
               </a> 
 
-              <a className='cursor-pointer w-10' href="https://github.com/fraynilson2003">
+              <a className='cursor-pointer w-10' href="https://github.com/fraynilson2003" target="_blank" rel="noopener noreferrer">
                 <FaGithub className='scale-[1.6]'/>
               </a>  
 
-              <a className='cursor-pointer w-10' href="https://github.com/fraynilson2003">
+              <a className='cursor-pointer w-10' href="https://github.com/fraynilson2003" target="_blank" rel="noopener noreferrer">
                 <FaYoutube className='scale-[1.6]'/>
               </a>          
           </div>
