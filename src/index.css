@@ -42,22 +42,18 @@ body{
   outline: none;
   border-bottom: 2px solid white;
   background-color: rgba(0, 0, 0, 0);
-  font-family: Montserrat;
 }
 
 .input-per:hover{
   outline: none;
   border-bottom: 2px solid white;
   background-color: rgba(0, 0, 0, 0);
-  font-family: Montserrat sans-serif;
-
 }
 
 .input-per:focus{
   outline: none;
   border-bottom: 2px solid white;
   background-color: rgba(0, 0, 0, 0);
-  font-family: Montserrat sans-serif;
 }
 
 .container-text-area::placeholder {
