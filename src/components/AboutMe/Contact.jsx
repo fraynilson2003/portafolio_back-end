@@ -126,8 +126,8 @@ export default function Contact() {
                   value={values.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className='w-full  py-[2px] font-primary text-lg  bg-font_primary/0
-                  input-per container-input'/>
+                  className='w-full  py-[2px] font-primary text-lg
+                  input-per  container-input'/>
 
                 {errors.email && touched.email ? (
                   <p className="text-bottom_barra text-md font-semibold font-primary">
@@ -150,7 +150,7 @@ export default function Contact() {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 className='w-full  min-h-[80px] max-h-[120px] py-[2px] font-primary text-lg pr-3 
-                  input-per  container-text-area' />
+                  input-per   container-text-area' />
 
               {errors.message && touched.message ? (
                 <p className="text-bottom_barra text-md text-md font-semibold font-primary">
