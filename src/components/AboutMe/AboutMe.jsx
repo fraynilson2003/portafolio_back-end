@@ -2,29 +2,11 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { fadeIn } from '../../helpers/variantsMotion'
 
-
-import KataraImg from "../../assets/avatarAng/splash-katara.png"
 import { optionLinks } from './NavAboutMe'
 import TextShpere from './TextShpere'
 
 export default function AboutMe() {
-          {/* <motion.div
-            variants={fadeIn("right", 0.4 )} 
-            initial="hidden" 
-            whileInView={"show"} 
-            viewport={{once: false, amount:0.3}}
-            className='w-full flex justify-center items-center h-full'  
-            >
 
-            <div className="w-full flex justify-center h-[90%] max-h-[500px] overflow-hidden relative">
-              <img 
-                className="object-contain h-full rounded-lg brightness-[0.2] md:brightness-100 filter drop-shadow-2xl
-                  text-green hover:brightness-110" 
-                src={KataraImg} alt="Ang" />
-            </div>
-
-
-          </motion.div> */}
 
   return (
     <div id={optionLinks.about} className='flex flex-col-reverse h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full items-center justify-center max-w-[1400px] relative md:flex-row'>

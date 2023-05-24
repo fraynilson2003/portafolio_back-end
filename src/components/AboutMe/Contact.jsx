@@ -7,7 +7,6 @@ import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa"
 
 import ZukoImg from "../../assets/avatarAng/splash-zuko.png"
 import { optionLinks } from './NavAboutMe'
-import { BiCopyright } from 'react-icons/bi'
 import { SchemaContact } from './schemaContact'
 import axios from 'axios'
 
