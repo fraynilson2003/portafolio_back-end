@@ -51,19 +51,19 @@ export default function TextShpere(){
 
     const options_320  = {
       radius: 100,
-      maxSpeed: "fast",
+      maxSpeed: "normal",
       initSpeed: "normal",
       keep: true,
     };
     const options_480  = {
       radius: 120,
-      maxSpeed: "fast",
+      maxSpeed: "normal",
       initSpeed: "normal",
       keep: true,
     };
     const options_640  = {
       radius: 140,
-      maxSpeed: "fast",
+      maxSpeed: "normal",
       initSpeed: "normal",
       keep: true,
     };
