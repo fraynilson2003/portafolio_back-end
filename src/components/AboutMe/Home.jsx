@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { fadeIn } from '../../helpers/variantsMotion'
 import ReactDOMServer from 'react-dom/server';
 
-import AngImg from "../../assets/avatarAng/splash-ang.png"
+import AngImg from "../../assets/avatarAng/splash-ang.webp"
 
 import { Tooltip } from 'react-tooltip';
 import { optionLinks } from './NavAboutMe';

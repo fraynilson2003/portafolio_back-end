@@ -5,7 +5,7 @@ import { TypeAnimation } from 'react-type-animation'
 
 import TophImg from "../../assets/avatarAng/splash-toph.png"
 import apiDjango from "../../assets/projects/api django.png"
-import appVideogames from "../../assets/projects/app videogames.png"
+import appVideogames from "../../assets/projects/app videogames.jpg"
 
 import { optionLinks } from './NavAboutMe'
 import { putStateSectionApp } from '../../redux/actions/actions'
