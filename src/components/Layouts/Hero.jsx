@@ -3,7 +3,7 @@ import AsideHome from "./AsideHome";
 import DjangoApp from "../../apps/apis/DjangoPython/DjangoApp";
 import { sectionsApp } from "./constants";
 import About from "../AboutMe/About";
-import AsideApp2 from "./AsideApp2";
+import AsideAppDjango from "./AsideAppDjango";
 import { useSelector } from "react-redux";
 
 export default function Hero() {
@@ -22,7 +22,7 @@ export default function Hero() {
 
       {stateSectionApp == sectionsApp.myProject_2 ? (
         <>
-          <AsideApp2 />
+          <AsideAppDjango />
           <div className="flex-1">
             <DjangoApp />
           </div>

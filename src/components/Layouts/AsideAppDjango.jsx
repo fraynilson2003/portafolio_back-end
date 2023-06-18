@@ -7,7 +7,7 @@ import {BiHomeAlt, BiUser} from "react-icons/bi"
 
 import { Link } from "react-scroll"
 
-export default function AsideApp2() {
+export default function AsideAppDjango() {
   let [deployment, setDeployment] = useState(false)
 
 

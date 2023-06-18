@@ -69,19 +69,19 @@ export default function TextShpere(){
     };
     const options_768  = {
       radius: 220,
-      maxSpeed: "fast",
+      maxSpeed: "normal",
       initSpeed: "normal",
       keep: true,
     };
     const options_960  = {
       radius: 250,
-      maxSpeed: "fast",
+      maxSpeed: "normal",
       initSpeed: "normal",
       keep: true,
     };
     const options_1200 = {
       radius: 290,
-      maxSpeed: "fast",
+      maxSpeed: "normal",
       initSpeed: "normal",
       keep: true,
     };
