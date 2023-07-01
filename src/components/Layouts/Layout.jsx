@@ -4,12 +4,14 @@ import Hero from "./Hero";
 
 const Layout = () => {
   return (
-    <div className="realtive flex flex-col justify-between w-full h-screen">
-      <NavBar />
+    <div className="bg-primary">
+      <div className="realtive flex flex-col justify-between w-full max-w-[1365px] h-screen mx-auto">
+        <NavBar />
 
-      <Hero />
+        <Hero />
 
-      <Bottom />
+        <Bottom />
+      </div>
     </div>
   );
 };
