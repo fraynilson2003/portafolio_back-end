@@ -7,7 +7,7 @@ import TophImg from "../../assets/avatarAng/splash-toph.png"
 import apiDjango from "../../assets/projects/api django.png"
 import appVideogames from "../../assets/projects/app videogames.jpg"
 
-import { optionLinks } from './NavAboutMe'
+import { optionLinks } from './optionsLinks'
 import { putStateSectionApp } from '../../redux/actions/actions'
 import { useDispatch } from 'react-redux'
 import { sectionsApp } from '../Layouts/constants'
@@ -20,15 +20,14 @@ export default function Projects() {
   }
 
   return (
-    <div id={optionLinks.work} className='flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 relative md:flex-row max-w-[1400px]'>
+    <div id={optionLinks.work} className='snap-center flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 relative md:flex-row max-w-[1400px]'>
       
       <div className='flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden md:relative absolute'>
         <motion.div
-          variants={fadeIn("right", 0.4 )} 
+          variants={fadeIn("right", 0.3, 0.4)} 
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}
-          exit={{ opacity: 100 }}
           className='w-full flex justify-center items-center h-full'  
           >
 
@@ -48,7 +47,7 @@ export default function Projects() {
 
       <div className="flex-1 flex items-center  mx-6 md:w-[50%]  overflow-hidden  z-[115]">
         <motion.div
-          variants={fadeIn("left", 0.4 )} 
+          variants={fadeIn("left", 0.3, 0.4)} 
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}

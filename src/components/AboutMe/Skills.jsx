@@ -20,23 +20,21 @@ import { TbBrandTypescript } from "react-icons/tb";
 
 import KataraImgEsp from "../../assets/avatarAng/splash-katara_espejo.png"
 
-import { optionLinks } from './NavAboutMe';
+import { optionLinks } from './optionsLinks'; 
 
 export default function Skills() {
 
 
 
   return (
-    <div id={optionLinks.skills} className='flex flex-col-reverse h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full justify-center  max-w-[1400px] relative md:flex-row'>
+    <div id={optionLinks.skills} className='snap-center flex flex-col-reverse h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full justify-center  max-w-[1400px] relative md:flex-row'>
   
       <div className="flex-1 flex items-center mx-1 md:mx-6 md:w-[50%] justify-center h-full overflow-hidden z-[115] font-primary ">
         <motion.div
-          variants={fadeIn("right", 0.4 )} 
+          variants={fadeIn("right", 0.3, 0.4)} 
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}
-          transition={{ duration: 1 }}
-
           className='flex flex-col h-full w-full items-center justify-center '>
 
           <h1 
@@ -118,7 +116,7 @@ export default function Skills() {
 
       <div className='flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden md:relative absolute'>
         <motion.div
-          variants={fadeIn("left", 0.4 )} 
+          variants={fadeIn("left", 0.3, 0.4)} 
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}

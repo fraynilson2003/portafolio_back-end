@@ -6,7 +6,7 @@ import { TypeAnimation } from 'react-type-animation'
 import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa"
 
 import ZukoImg from "../../assets/avatarAng/splash-zuko.png"
-import { optionLinks } from './NavAboutMe'
+import { optionLinks } from './optionsLinks' 
 import { SchemaContact } from './schemaContact'
 import axios from 'axios'
 
@@ -55,7 +55,7 @@ export default function Contact() {
   }
 
   return (
-    <div id={optionLinks.services} className='flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full relative md:flex-row max-w-[1400px]'>
+    <div id={optionLinks.services} className='snap-center flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full relative md:flex-row max-w-[1400px]'>
       
       {/* image zuko */}
       <div className='flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden md:hidden absolute'>
@@ -84,7 +84,7 @@ export default function Contact() {
       <div className="flex-1 relative flex flex-col md:flex-row justify-center items-center  mx-6 w-full h-full overflow-hidden max-w-[1400px] z-[115]">
 
         <motion.div
-          variants={fadeIn("left", 0.4 )} 
+          variants={fadeIn("right", 0.3, 0.4)} 
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}
@@ -104,7 +104,7 @@ export default function Contact() {
         </motion.div>
 
         <motion.div
-          variants={fadeIn("left", 0.4 )} 
+          variants={fadeIn("left", 0.3, 0.4)} 
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}
@@ -189,10 +189,10 @@ export default function Contact() {
 
         {/* Copyright */}
         <motion.p
-          variants={fadeIn("up", 0.2 )} 
+          variants={fadeIn("up", 0.2, 0.3)} 
           initial="hidden" 
           whileInView={"show"} 
-          viewport={{once: false, amount:0.2}}
+          viewport={{once: false, amount:0.3}}
           className='absolute bottom-[80px] w-full text-center'>
             Copyright © 2023 FTT
         </motion.p>

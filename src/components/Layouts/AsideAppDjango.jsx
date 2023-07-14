@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AvatarIcon, Copyicon } from "../../SVG/icons";
-import { optionLinks } from "../AboutMe/NavAboutMe";
+import { optionLinks } from "../AboutMe/optionsLinks";
 
 import { BsBriefcase, BsChatSquareText} from "react-icons/bs"
 import {BiHomeAlt, BiUser} from "react-icons/bi"

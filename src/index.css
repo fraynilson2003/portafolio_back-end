@@ -3,66 +3,68 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   margin: 0;
   padding: 0;
+  background-color: #1E1E1E;
 }
 
 
-.active-scroll{
+.active-scroll {
   background-color: #ffffff;
   border-radius: 40px;
   color: rgb(0, 0, 0);
-} 
+}
 
-.active-2-scroll{
+.active-2-scroll {
   border-left: 2px solid #fff;
   margin-left: 0;
 }
 
-.tuki{
+.tuki {
   background-color: #1c6e0f;
 }
 
-.div-gradient{
-  background: linear-gradient(
-    86.23deg,
-    #3c414070 21.43%,
-    #121d1c50 50.63%,
-    #0c1f1c34 100%,
-    #04221748 117.04%
-  );
+.div-gradient {
+  background: linear-gradient(86.23deg,
+      #3c414070 21.43%,
+      #121d1c50 50.63%,
+      #0c1f1c34 100%,
+      #04221748 117.04%);
 
 }
 
 
 /* input contact */
 
-.input-per{
+.input-per {
   outline: none;
   border-bottom: 2px solid white;
   background-color: rgba(0, 0, 0, 0);
 }
 
-.input-per:hover{
+.input-per:hover {
   outline: none;
   border-bottom: 2px solid white;
   background-color: rgba(0, 0, 0, 0);
 }
 
-.input-per:focus{
+.input-per:focus {
   outline: none;
   border-bottom: 2px solid white;
   background-color: rgba(0, 0, 0, 0);
 }
 
 .container-text-area::placeholder {
-  font-style: sans-serif; /* Estilo de fuente del placeholder */
-  color: #cccccca2; /* Color del texto del placeholder */
-  opacity: 0.5; /* Opacidad del placeholder */
+  font-style: sans-serif;
+  /* Estilo de fuente del placeholder */
+  color: #cccccca2;
+  /* Color del texto del placeholder */
+  opacity: 0.5;
+  /* Opacidad del placeholder */
 }
 
-.container-text-area::-webkit-scrollbar{
+.container-text-area::-webkit-scrollbar {
   background-color: rgb(179, 176, 176);
   height: 100%;
   border-radius: 5px;
@@ -70,22 +72,20 @@ body{
 
 }
 
-.container-text-area::-webkit-scrollbar-thumb{
+.container-text-area::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: #333333;
 
 }
 
 
-.button-submit{
-  background: linear-gradient(
-      86.23deg,
+.button-submit {
+  background: linear-gradient(86.23deg,
       #224e45a8 21.43%,
       #0c3d399d 50.63%,
       #0c5f5379 100%,
-      #0eaf7488 117.04%
-  );
-  
+      #0eaf7488 117.04%);
+
 }
 
 
@@ -95,18 +95,22 @@ body{
 
 
 
-.tagcloud-320px, .tagcloud-480px, .tagcloud-640px, .tagcloud-768px,
-.tagcloud-960px, .tagcloud-1200px {
-    display: inline-block;
-    top: 0;
-    left: 0;
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.0625em;
-    font-size: 1em;
-    color: #00ffffff;
+.tagcloud-320px,
+.tagcloud-480px,
+.tagcloud-640px,
+.tagcloud-768px,
+.tagcloud-960px,
+.tagcloud-1200px {
+  display: inline-block;
+  top: 0;
+  left: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.0625em;
+  font-size: 1em;
+  color: #00ffffff;
 
-} 
+}
 
 .tagcloud--item:hover {
 
@@ -123,5 +127,3 @@ body{
 .tagcloud-320px--item:hover {
     color: #08c456;
 } */
-
-

@@ -2,18 +2,18 @@ import React from 'react'
 import { motion } from "framer-motion"
 import { fadeIn } from '../../helpers/variantsMotion'
 
-import { optionLinks } from './NavAboutMe'
+import { optionLinks } from './optionsLinks'
 import TextShpere from './TextShpere'
 
 export default function AboutMe() {
 
 
   return (
-    <div id={optionLinks.about} className='flex flex-col-reverse h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full items-center justify-center max-w-[1400px] relative md:flex-row'>
+    <div id={optionLinks.about} className='snap-center flex flex-col-reverse h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 w-full items-center justify-center max-w-[1400px] relative md:flex-row'>
   
       <div className='flex  items-center px-3 w-full h-[200px]  md:w-[50%] md:h-full overflow-hidden relative z-[199]'>
          <motion.div
-            variants={fadeIn("right", 0.4 )} 
+            variants={fadeIn("right", 0.3, 0.4)} 
             initial="hidden" 
             whileInView={"show"} 
             viewport={{once: false, amount:0.3}}
@@ -26,7 +26,7 @@ export default function AboutMe() {
 
       <div className="w-full flex items-center  mx-6 md:w-[50%] md:h-full overflow-hidden  z-[115]">
         <motion.div
-          variants={fadeIn("left", 0.4 )} 
+          variants={fadeIn("left",0.3, 0.4)} 
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}

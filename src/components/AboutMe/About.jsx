@@ -15,7 +15,7 @@ export default function About() {
 //
   return (
     <div id='per-scroll' className='flex flex-1  flex-col div-gradient relative items-center h-[calc(100vh-44px)] max-h-[calc(100vh-44px)] 
-      overflow-y-auto container-div  mx-auto text-font_primary'>
+      overflow-y-auto container-div  mx-auto text-font_primary snap-y scroll-smooth snap-mandatory'>
       {/* backdrop-blur-[1px] */}
       {/* menu */}
       <NavAboutMe/>

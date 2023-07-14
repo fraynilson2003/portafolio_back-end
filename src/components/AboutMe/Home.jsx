@@ -7,24 +7,27 @@ import ReactDOMServer from 'react-dom/server';
 import AngImg from "../../assets/avatarAng/splash-ang.webp"
 
 import { Tooltip } from 'react-tooltip';
-import { optionLinks } from './NavAboutMe';
+import { optionLinks } from './optionsLinks'; 
 import { Link } from 'react-scroll';
 
 export default function Home() {
 
-
+  const handleScroll = (linkContainer) => {
+    const targetElement = document.querySelector(`#${linkContainer}`);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
-    <div id={optionLinks.home} className='flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 relative md:flex-row max-w-[1400px]'>
+    <div id={optionLinks.home} className='snap-center flex h-[calc(100vh-44px)] min-h-[calc(100vh-44px)] flex-1 relative md:flex-row max-w-[1400px]'>
   
       <div className="flex-1 flex items-center mx-1 md:mx-6 md:w-[50%] h-full overflow-hidden z-[115] font-primary ">
         <motion.div
-          variants={fadeIn("right", 0.4 )} 
+          variants={fadeIn("right", 0.3, 0.4)} 
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}
-          transition={{ duration: 1 }}
-
           className='flex flex-col h-full items-center justify-center '>
 
           <h1 
@@ -86,18 +89,11 @@ export default function Home() {
                   Contact me
               </a>
             </button> */}
-      
-            <Link 
-              id='option-scroll'
-              containerId="per-scroll"
-              to={optionLinks.services} 
-              className="w-[110px] mx-3 py-2 button-1 hover:brightness-125 rounded-full text-center cursor-pointer"
-              smooth={true}
-              duration={800}
-              spy={true}>
+            <div 
+              onClick={()=>handleScroll(optionLinks.services)} 
+              className="w-[110px] mx-3 py-2 button-1 hover:brightness-125 rounded-full text-center cursor-pointer">
               Contact me
-
-            </Link>
+            </div>
 
 
             <button className='w-[110px] mx-3 py-2 button-2 hover:brightness-125 rounded-full text-center'>
@@ -112,7 +108,7 @@ export default function Home() {
 
       <div className='flex-1 px-3 w-full md:w-[50%] h-full overflow-hidden md:relative absolute'>
         <motion.div
-          variants={fadeIn("left", 0.4 )} 
+          variants={fadeIn("left", 0.3, 0.4)} 
           initial="hidden" 
           whileInView={"show"} 
           viewport={{once: false, amount:0.3}}
